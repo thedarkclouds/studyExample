@@ -7,9 +7,7 @@ public class TestFindLove {
 
             Persion obj =(Persion) new MeiPo().getInstance(new XiaoXinXin());
             System.out.println(obj.getClass());
-            obj.findLove();
-
-
+            obj.findBoyFriend();
 
             //原理
             //1.拿到被代理对象，然后获取他的接口

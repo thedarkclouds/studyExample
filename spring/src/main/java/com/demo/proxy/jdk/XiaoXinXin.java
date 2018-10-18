@@ -5,11 +5,10 @@ public class XiaoXinXin implements  Persion {
     private String sex="女";
     private  String name="小星星";
 
+
     @Override
-    public void findLove() {
-        System.out.println("我叫"+this.name+",性别："+this.sex);
-        System.out.println("长得帅的");
-        System.out.println("有房有车");
+    public void findBoyFriend() {
+        System.out.println("找呀找，找到一个小对象");
     }
 
     public String getSex() {

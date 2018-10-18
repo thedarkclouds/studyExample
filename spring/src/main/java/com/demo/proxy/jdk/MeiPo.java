@@ -24,10 +24,20 @@ public class MeiPo implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-        System.out.println("我是媒婆，你的性别是："+this.target.getSex()+",的给你找一个异性");
-
-
-        this.target.findLove();
-        return null;
+        bored();
+        Object result = method.invoke(target, args);
+        interesting();
+        return result;
     }
+
+
+
+    private void bored(){
+        System.out.println("没对象，没人玩，无聊呀！");
+    }
+
+    private void interesting(){
+        System.out.println("有对象，真有趣，每天都很开心！");
+    }
+
 }
