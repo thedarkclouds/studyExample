@@ -13,6 +13,7 @@
     <module>xueliehua</module>
       <module>zookeeper</module>
       <module>spring</module>
+      <module>Thread</module>
 
   </modules>
 
