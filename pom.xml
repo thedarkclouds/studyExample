@@ -14,6 +14,8 @@
       <module>zookeeper</module>
       <module>spring</module>
       <module>Thread</module>
+      <module>active-mq-send</module>
+      <module>active-mq-recive</module>
 
   </modules>
 
