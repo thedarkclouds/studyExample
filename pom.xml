@@ -16,6 +16,8 @@
       <module>Thread</module>
       <module>active-mq-send</module>
       <module>active-mq-recive</module>
+      <module>work</module>
+      <module>java</module>
 
   </modules>
 
