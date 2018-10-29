@@ -1,4 +1,4 @@
-package sqlrefresh;
+package sqlexport;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
@@ -226,8 +226,30 @@ public class ImportExcel {
 
 
     public static void main(String[] args) {
-        File file=new File("d://f.xsl");
-        ImportExcel importExcel = new ImportExcel();
-        List<Map<Integer, Object>> lists = importExcel.read(file);
+  /*  InputStream inputStream=null;
+    try{
+      inputStream=new FileInputStream(new File("D:\\work\\76.xlsx"));
+      List<Map<Integer,Object>> list=new ImportExcel().read(inputStream);
+      Map<Integer,Object> map=list.get(0);
+      map.size();
+      System.out.println("size()=="+map.size());
+
+      for (int i=0;i<map.size();i++){
+
+       // System.out.println(i+"----"+map.get(i));
+      }
+      System.out.println(list);
+    }catch (Exception e ){
+      e.printStackTrace();
+
+    }finally {
+      try{
+        inputStream.close();
+      }catch (Exception e){
+        e.printStackTrace();
+      }
+    }
+
+  }*/
     }
 }

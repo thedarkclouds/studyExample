@@ -12,7 +12,7 @@ import java.util.Map;
 
 
 public class FoodSqlExport {
-    private final static String address = "F:\\sql\\foodListUpdate.sql";
+    private final static String address = "E:\\sql\\foodListUpdate.sql";
 
     public static void main(String[] args) {
 
@@ -28,7 +28,7 @@ public class FoodSqlExport {
             }
             FileOutputStream out = new FileOutputStream(fo, true);
             ImportExcel importExcel = new ImportExcel();
-            productRefresh(out, importExcel);
+          //  productRefresh(out, importExcel);
              foodRecommUpdate(out, importExcel);
             out.close();
         } catch (Exception e) {
@@ -58,11 +58,6 @@ public class FoodSqlExport {
     public static void refresh(Map<Integer, Object> map, FileOutputStream out) {
               String name=map.get(1).toString();
 
-              if (name.equals("御冰坊 皇太后卡布奇诺雪糕")){
-
-                  System.out.println(555);
-              }
-
               if (name.contains("'")){
                   name=name.replace("'","''");
               }
@@ -89,7 +84,7 @@ public class FoodSqlExport {
 
     //食物推荐属性更新
     private static void foodRecommUpdate(FileOutputStream out, ImportExcel importExcel) {
-        File f = new File("F:\\excel1");
+        File f = new File("E:\\excel");
         File file1s[] = f.listFiles();
         for (File file : file1s) {
             List<Map<Integer, Object>> lists = importExcel.read(file);
@@ -158,12 +153,17 @@ public class FoodSqlExport {
             }
         }
         if (flag == 2) {
-            if (list.contains("中餐")) {
+            if (list.contains("午餐")) {
                 return 1;
             }
         }
         if (flag == 3) {
             if (list.contains("晚餐")) {
+                return 1;
+            }
+        }
+        if (flag == 4) {
+            if (list.contains("加餐")) {
                 return 1;
             }
         }
